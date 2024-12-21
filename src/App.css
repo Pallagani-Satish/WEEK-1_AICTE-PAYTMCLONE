@@ -1,0 +1,196 @@
+/* General Flexbox Layout */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  max-width: 1200px; /* Limit width for proper alignment */
+  margin: 0 auto; /* Center the content */
+}
+
+/* Left and Right Containers */
+.content-left,
+.content-right {
+  flex: 1; /* Equal space for both sides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px; /* Add some spacing */
+}
+
+/* Image Styling */
+.content-image {
+  max-width: 100%; /* Adjust the image to the container */
+  height: auto;
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  object-fit: contain; /* Ensure image scales well */
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff; /* White background */
+  border-bottom: 1px solid #ddd; /* Subtle bottom border */
+}
+
+header a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff; /* Paytm-like blue */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.footer h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #555;
+}
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 40px; /* Adjust logo size */
+  margin-right: 10px;
+}
+
+nav .menu {
+  display: flex;
+  gap: 20px; /* Even spacing between links */
+}
+
+nav .menu a {
+  text-decoration: none;
+  color: #007bff; /* Paytm-like blue */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .menu a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+nav .auth-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+nav .auth-buttons a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #007bff;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .auth-buttons a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  gap: 20px; /* Space between left and right sides */
+}
+
+.content-left,
+.content-right {
+  flex: 1; /* Ensure both sides take equal width */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center;
+  text-align: center;
+}
+
+.content-image {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  margin-bottom: 20px; /* Add spacing below the image */
+}
+
+.content-text {
+  max-width: 400px; /* Limit text width */
+}
+
+.content-text h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content-text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+  }
+
+  .content-left,
+  .content-right {
+    margin: 20px 0; /* Add spacing for stacked layout */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header a {
+    margin: 5px 0;
+  }
+}
