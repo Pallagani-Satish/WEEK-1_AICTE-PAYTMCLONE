@@ -35,46 +35,48 @@
   object-fit: contain; /* Ensure image scales well */
 }
 
-/* Header Styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff; /* White background */
-  border-bottom: 1px solid #ddd; /* Subtle bottom border */
-}
-
-header a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #007bff; /* Paytm-like blue */
+/* Button Styling */
+.download-btn {
+  background-color: #000000; /* Black background */
+  color: white;
+  padding: 15px 30px;
   font-size: 1rem;
-  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-header a:hover {
-  text-decoration: underline;
+.download-btn:hover {
+  background-color: #333333; /* Darker black on hover */
 }
 
-/* Footer Section */
-.footer {
+/* Download Page Styling */
+.download-container {
   text-align: center;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 50px;
 }
 
-.footer h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #333;
+.download-link-container {
+  margin-top: 30px;
 }
 
-.footer p {
+.download-link {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color:black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
   font-size: 1rem;
-  color: #555;
+  transition: background-color 0.3s ease-in-out;
 }
+
+.download-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
 /* Navigation Bar */
 nav {
   display: flex;
@@ -102,7 +104,7 @@ nav .menu {
 
 nav .menu a {
   text-decoration: none;
-  color: #007bff; /* Paytm-like blue */
+  color: black; /* Paytm-like blue */
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
@@ -132,44 +134,51 @@ nav .auth-buttons a:hover {
   background-color: #007bff;
   color: #ffffff;
 }
-
-/* Main Content Layout */
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  gap: 20px; /* Space between left and right sides */
+/* Landing Page Left Section - Adjust Image Size */
+.content-left .content-image {
+  max-width: 10%;  /* Set the maximum width to 80% to reduce the image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+/* Download Page Background Image */
+.download-container {
+  background-image: url("C:\Users\win11\OneDrive\Desktop\paytm\paytm_clone\src\images\bg.webp"); /* Replace with your actual background image URL */
+  background-size: cover; /* Make sure the image covers the entire area */
+  background-position: center; /* Center the image */
+  padding: 50px; /* Space inside the container */
+  text-align: center; /* Center the text */
+  color: white; /* Ensure text is readable on top of the background */
 }
 
-.content-left,
-.content-right {
-  flex: 1; /* Ensure both sides take equal width */
-  display: flex;
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center;
-  text-align: center;
+/* Add some spacing and styling for the heading and paragraphs in the download page */
+.download-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.content-image {
-  max-width: 100%; /* Make images responsive */
-  height: auto;
-  margin-bottom: 20px; /* Add spacing below the image */
-}
-
-.content-text {
-  max-width: 400px; /* Limit text width */
-}
-
-.content-text h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.content-text p {
-  font-size: 1rem;
-  color: #666;
+.download-paragraph {
+  font-size: 1.2rem;
   line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.download-link-container {
+  margin: 20px;
+}
+
+.download-link {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.download-link:hover {
+  background-color: #007bff;
+  color: white;
 }
 
 
@@ -184,13 +193,696 @@ nav .auth-buttons a:hover {
   .content-right {
     margin: 20px 0; /* Add spacing for stacked layout */
   }
+}
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+/* Left Section Stacked Layout */
+.content-left {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align image and text */
+  text-align: center; /* Center the text content */
+  margin: 20px; /* Add spacing around */
+}
+
+/* Image Styling */
+.content-left .content-image {
+  max-width: 80%; /* Set max width for a smaller image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between image and paragraph */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Content Text Styling */
+.content-left .content-text {
+  max-width: 400px; /* Limit text width */
+}
+
+.content-left .content-text h2 {
+  font-size: 2.1rem; /* Adjust heading size */
+  color: #333; /* Dark text */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.content-left .content-text p {
+  font-size: 1.5rem; /* Adjust font size for paragraph */
+  color: #666; /* Light gray text */
+  line-height: 1.6; /* Better line spacing */
+}
+/* General Flexbox Layout */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Button Styling */
+.download-btn, .otp-btn, .login-btn, .recharge-btn, .transfer-btn {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.download-btn:hover, .otp-btn:hover, .login-btn:hover, .recharge-btn:hover, .transfer-btn:hover {
+  background-color: #333333;
+}
+
+/* Form Styling */
+.recharge-form, .sign-in-container, .transfer-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.recharge-form input, .sign-in-container input, .transfer-form input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* General Flexbox Layout */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  max-width: 1200px; /* Limit width for proper alignment */
+  margin: 0 auto; /* Center the content */
+}
+
+/* Left and Right Containers */
+.content-left,
+.content-right {
+  flex: 1; /* Equal space for both sides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px; /* Add some spacing */
+}
+
+/* Image Styling */
+.content-image {
+  max-width: 100%; /* Adjust the image to the container */
+  height: auto;
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  object-fit: contain; /* Ensure image scales well */
+}
+
+/* Button Styling */
+.download-btn {
+  background-color: #000000; /* Black background */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: #333333; /* Darker black on hover */
+}
+
+/* Download Page Styling */
+.download-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.download-link-container {
+  margin-top: 30px;
+}
+
+.download-link {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.download-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 40px; /* Adjust logo size */
+  margin-right: 10px;
+}
+
+nav .menu {
+  display: flex;
+  gap: 20px; /* Even spacing between links */
+}
+
+nav .menu a {
+  text-decoration: none;
+  color: #0056b3; /* Paytm-like blue */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .menu a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+nav .auth-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+nav .auth-buttons a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #0056b3;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #007bff;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .auth-buttons a:hover {
+  background-color:#0056b3;
+  color: #ffffff;
+}
+
+/* Landing Page Left Section - Adjust Image Size */
+.content-left .content-image {
+  max-width: 10%;  /* Set the maximum width to 80% to reduce the image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+/* Download Page Background Image */
+.download-container {
+  background-image: url("C:\\Users\\win11\\OneDrive\\Desktop\\paytm\\paytm_clone\\src\\images\\bg.webp"); /* Replace with your actual background image URL */
+  background-size: cover; /* Make sure the image covers the entire area */
+  background-position: center; /* Center the image */
+  padding: 50px; /* Space inside the container */
+  text-align: center; /* Center the text */
+  color: white; /* Ensure text is readable on top of the background */
+}
+
+/* Add some spacing and styling for the heading and paragraphs in the download page */
+.download-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.download-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.download-link-container {
+  margin: 20px;
+}
+
+.download-link {
+  font-size: 1.2rem;
+  color: #0056b3;
+  text-decoration: none;
+  border: 2px solid #0056b3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.download-link:hover {
+  background-color:#0056b3;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Stack images vertically on smaller screens */
   }
 
-  header a {
-    margin: 5px 0;
+  .content-left,
+  .content-right {
+    margin: 20px 0; /* Add spacing for stacked layout */
+  }
+}
+
+/* Left Section Stacked Layout */
+.content-left {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align image and text */
+  text-align: center; /* Center the text content */
+  margin: 20px; /* Add spacing around */
+}
+
+/* Image Styling */
+.content-left .content-image {
+  max-width: 80%; /* Set max width for a smaller image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between image and paragraph */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Content Text Styling */
+.content-left .content-text {
+  max-width: 400px; /* Limit text width */
+}
+
+.content-left .content-text h2 {
+  font-size: 1.8rem; /* Adjust heading size */
+  color: #333; /* Dark text */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.content-left .content-text p {
+  font-size: 1rem; /* Adjust font size for paragraph */
+  color: #666; /* Light gray text */
+  line-height: 1.6; /* Better line spacing */
+}
+/* General container styling */
+
+.recharge-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Left form section */
+.form-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.recharge-btn {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.recharge-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Right plans section */
+.plans-section {
+  flex: 2;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.plans-section h2 {
+  margin-bottom: 20px;
+}
+
+.plan-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.plan-details h4 {
+  margin: 0;
+  color:  #0056b3
+}
+
+.plan-details p {
+  margin: 5px 0;
+}
+
+.plan-details small {
+  color: #555;
+}
+
+.plan-price button {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.plan-price button:hover {
+  background-color: #0056b3;
+}
+
+.check-balance-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.check-balance-form {
+  margin-bottom: 20px;
+}
+
+.check-balance-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.check-balance-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.check-balance-btn {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.check-balance-btn:hover {
+  background-color: #0056b3;
+}
+
+.balance-display {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.transfer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.transfer-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.transfer-left h1 {
+  font-size: 2.5rem;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+.transfer-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.transfer-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.transfer-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.transfer-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transfer-btn:hover {
+  background-color: #003d82;
+}
+
+.transfer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.check-balance-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.check-balance-left {
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+
+.check-balance-right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-balance-form {
+  margin-top: 20px;
+}
+
+.check-balance-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+.check-balance-btn {
+  background-color:  #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.check-balance-btn:hover {
+  background-color:  #0056b3;
+}
+
+.balance-display {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.balance-image {
+  width: 100%;
+  height: auto;
+}
+/* Container for the entire sign-in page */
+.sign-in-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+  background-color: #f9f9f9; /* Light background to give space for the content */
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Left Section (form) */
+.sign-in-left {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 500px; /* To keep the form width controlled */
+}
+
+.sign-in-left h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sign-in-left p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.sign-in-form input:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Button styling */
+.otp-btn, .login-btn {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.otp-btn:hover, .login-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.otp-btn:active, .login-btn:active {
+  transform: translateY(0);
+}
+
+/* Right Section (image) */
+.sign-in-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.sign-in-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Same shadow as left section for consistency */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .sign-in-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sign-in-left {
+    max-width: 100%;
+  }
+
+  .sign-in-right {
+    max-width: 100%;
+    margin-top: 20px;
   }
 }
